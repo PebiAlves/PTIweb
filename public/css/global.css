@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+
+}
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+main {
+    flex: 1; 
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    flex-wrap: wrap;
+}
+.header-title h1 {
+    font-size: 24px;
+    color: black;
+    margin: 10px;
+    font-family: 'Poppins';
+}
+.header-links ul {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    margin: 20px;
+    list-style-type: none;
+}
+
+.header-links li a {
+    text-decoration: none;
+    color: rgb(16, 16, 16);
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.header-links li a:hover {
+    color: rgb(42, 42, 252);
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .header-links ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .header-title h1 {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-title h1 {
+        font-size: 1rem;
+    }
+
+    .header-links ul {
+        gap: 8px;
+    }
+
+    .header-links li a {
+        font-size: 0.9rem;
+    }
+}
+.menu {
+    width: auto;
+    padding: 20px;
+    border-top: 1px solid rgb(61, 61, 61);
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+}
+.menu nav ul {
+    display: flex;
+    gap: 15px; 
+}
+.menu nav ul li a {
+    font-size: 40px;
+    color: #000000;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    font-family: 'Poppins';
+}
+.menu nav ul li a:hover {
+    background-color: #007BFF; 
+    color: #fff; 
+}
+@media (max-width: 768px) {
+    .menu {
+        width: 100%;
+        height: auto; 
+        border-right: none;
+        border-bottom: 2px solid #ddd; 
+    }
+    .menu nav ul {
+        flex-direction: row; 
+        justify-content: center;
+        gap: 10px;
+    }
+    .menu nav ul li a {
+        font-size: 0.9rem;
+        padding: 8px 10px;
+    }
+}
+@media (max-width: 480px) {
+    .menu nav ul li a {
+        font-size: 0.8rem;
+        padding: 6px 8px;
+    }
+}
+.rodape {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    width: 100%; 
+    border-top: 1px solid black;
+}
+
+.rodape p {
+    font-size: 12px;
+    color: black;
+    font-family: 'Poppins';
+    margin: 0;
+}
